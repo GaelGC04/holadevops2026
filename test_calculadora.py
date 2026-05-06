@@ -9,6 +9,11 @@ class TestCalculadora(TestCase):
         resultado = calc.sumar(2, 2)
         self.assertEqual(4, resultado)
 
+    def test_ingresa_caracter(self):
+        calc = Calculadora()
+        resultado = calc.sumar('X', 2)
+        self.assertEqual('Sólo se admiten números', resultado)
+
 
 if __name__ == '__main__':
     unittest.main()
